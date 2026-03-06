@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Enhancer</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Image Enhancer</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <!-- Upload -->
+      <div class="control-group">
+        <label>Upload Image</label>
+        <div id="drop-zone" class="drop-zone">
+          <p>Drag &amp; drop an image here or click to upload</p>
+          <input type="file" id="file-input" accept="image/*" hidden>
+        </div>
+        <div id="preview-container" class="preview-container" hidden>
+          <img id="preview-img" alt="Preview">
+          <span id="img-dims"></span>
+          <button id="clear-upload" class="btn-small">Clear</button>
+        </div>
+      </div>
+
+      <!-- Model -->
+      <div class="control-group">
+        <label>Model</label>
+        <div class="radio-group">
+          <label><input type="radio" name="model" value="gpt-image-1.5" checked> gpt-image-1.5</label>
+          <label><input type="radio" name="model" value="FLUX.2-pro"> FLUX.2-pro</label>
+        </div>
+      </div>
+
+      <!-- Dimensions -->
+      <div class="control-group">
+        <label>Output Dimensions</label>
+        <div class="radio-group">
+          <label><input type="radio" name="dims" value="original" checked> Same as original</label>
+          <label><input type="radio" name="dims" value="1024x1024"> Square (1024x1024)</label>
+          <label><input type="radio" name="dims" value="832x1248"> 2:3 Portrait (832x1248)</label>
+          <label><input type="radio" name="dims" value="1248x832"> 3:2 Landscape (1248x832)</label>
+          <label><input type="radio" name="dims" value="custom"> Custom</label>
+        </div>
+        <div id="custom-dims" class="custom-dims" hidden>
+          <input type="number" id="custom-w" placeholder="Width" min="64" max="4096" value="1024">
+          <span>x</span>
+          <input type="number" id="custom-h" placeholder="Height" min="64" max="4096" value="1024">
+        </div>
+      </div>
+
+      <!-- Prompt -->
+      <div class="control-group">
+        <label>Prompt</label>
+        <div class="preset-row">
+          <select id="preset-select">
+            <option value="">— Select a preset —</option>
+          </select>
+          <button id="save-preset" class="btn-small" title="Save current prompt as preset">Save</button>
+          <button id="delete-preset" class="btn-small btn-danger" title="Delete selected preset">Del</button>
+        </div>
+        <textarea id="prompt" rows="4" placeholder="Describe how to enhance the image..."></textarea>
+      </div>
+
+      <!-- Count -->
+      <div class="control-group">
+        <label>Number of images</label>
+        <input type="number" id="count" value="4" min="1" max="8">
+      </div>
+
+      <button id="generate-btn" class="btn-primary">Generate</button>
+    </section>
+
+    <section class="results">
+      <h2>Results</h2>
+      <div id="results-grid" class="results-grid"></div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <img id="modal-img" alt="Full size">
+      <div class="modal-actions">
+        <a id="modal-download" download="enhanced.png" class="btn-small">Download</a>
+        <button id="modal-close" class="btn-small">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

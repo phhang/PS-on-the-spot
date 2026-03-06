@@ -1,0 +1,22 @@
+[
+  {
+    "id": "preset-1",
+    "name": "Enhance Lighting",
+    "prompt": "Enhance this image to better lighting, remove shadows and brighten the subject"
+  },
+  {
+    "id": "preset-2",
+    "name": "Studio Portrait",
+    "prompt": "Transform this into a professional studio portrait with soft lighting"
+  },
+  {
+    "id": "preset-3",
+    "name": "Monochromatic Background",
+    "prompt": "Create a Monochromatic Color Effect for background, while keeping the main subject in original color"
+  },
+  {
+    "id": "preset-4",
+    "name": "Clean Background",
+    "prompt": "Clean up the background by adding a background blur while keeping the main subject sharp and clear"
+  }
+]
