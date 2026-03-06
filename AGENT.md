@@ -39,6 +39,7 @@ python3 -m venv venv
 venv/bin/pip install -r requirements.txt
 cp .env.example .env   # fill in real endpoints/keys
 venv/bin/uvicorn app.main:app --reload
+# Or venv/bin/uvicorn app.main:app --reload --host 127.0.0.1 --port 9112
 # Open http://localhost:8000
 ```
 
