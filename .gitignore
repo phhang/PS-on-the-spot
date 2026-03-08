@@ -24,6 +24,13 @@ env/
 # Generated images
 generated/
 
+# Runtime generation history
+data/generated_history.json
+data/generated_history.db
+data/generated_history.db-shm
+data/generated_history.db-wal
+data/generated_history.db-journal
+
 # OS
 .DS_Store
 Thumbs.db

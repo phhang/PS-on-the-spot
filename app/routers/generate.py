@@ -1,5 +1,4 @@
 import base64
-import json
 import logging
 from datetime import datetime, timezone
 from io import BytesIO
@@ -10,8 +9,9 @@ from fastapi import APIRouter, BackgroundTasks, File, Form, UploadFile, HTTPExce
 from PIL import Image
 from PIL.PngImagePlugin import PngInfo
 
-from app.config import DATA_DIR, GENERATED_DIR
+from app.config import GENERATED_DIR
 from app.services import gpt_image, flux
+from app.services import history_store
 
 logger = logging.getLogger(__name__)
 
@@ -19,34 +19,8 @@ router = APIRouter(prefix="/api", tags=["generate"])
 
 _generated_dir = Path(GENERATED_DIR)
 _generated_dir.mkdir(parents=True, exist_ok=True)
-_history_file = Path(DATA_DIR) / "generated_history.json"
 
 _RECENT_LIMIT = 10
-_HISTORY_CAP = 200
-
-
-def _read_history() -> list[dict]:
-    if not _history_file.exists():
-        return []
-
-    try:
-        return json.loads(_history_file.read_text())
-    except json.JSONDecodeError:
-        logger.exception("Failed to parse generation history file: %s", _history_file)
-        return []
-
-
-def _write_history(entries: list[dict]) -> None:
-    _history_file.parent.mkdir(parents=True, exist_ok=True)
-    _history_file.write_text(json.dumps(entries[:_HISTORY_CAP], indent=2))
-
-
-def _append_history(entries: list[dict]) -> None:
-    if not entries:
-        return
-
-    history = _read_history()
-    _write_history(entries + history)
 
 
 def _save_image(
@@ -144,7 +118,7 @@ async def _generate_and_store(
         except Exception:
             logger.exception("Failed to save image %d to disk for job %s", i, job_id)
 
-    _append_history(history_entries)
+    history_store.add_entries(history_entries)
     logger.info(
         "Completed background generation: job_id=%s saved=%d/%d",
         job_id,
@@ -195,5 +169,4 @@ async def generate_images(
 
 @router.get("/generations/recent")
 async def recent_generations(limit: int = Query(_RECENT_LIMIT, ge=1, le=50)):
-    history = _read_history()
-    return {"items": history[:limit]}
+    return {"items": history_store.list_recent(limit)}
