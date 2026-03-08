@@ -55,28 +55,32 @@
 
       <!-- Prompt -->
       <div class="control-group">
-        <label>Prompt</label>
+        <label>Prompts</label>
         <div class="preset-row">
-          <select id="preset-select">
-            <option value="">— Select a preset —</option>
-          </select>
           <button id="save-preset" class="btn-small" title="Save current prompt as preset">Save</button>
-          <button id="delete-preset" class="btn-small btn-danger" title="Delete selected preset">Del</button>
+          <button id="delete-preset" class="btn-small btn-danger" title="Delete selected presets">Delete selected</button>
         </div>
-        <textarea id="prompt" rows="4" placeholder="Describe how to enhance the image..."></textarea>
+        <div id="preset-list" class="preset-list"></div>
+        <textarea id="prompt" rows="4" placeholder="Optional custom prompt. If filled, it will be queued alongside any checked presets."></textarea>
+        <p class="field-hint">Check multiple saved prompts to run them in parallel.</p>
       </div>
 
       <!-- Count -->
       <div class="control-group">
         <label>Number of images</label>
-        <input type="number" id="count" value="4" min="1" max="8">
+        <input type="number" id="count" value="1" min="1" max="8">
       </div>
 
       <button id="generate-btn" class="btn-primary">Generate</button>
+      <p id="queue-status" class="queue-status" aria-live="polite"></p>
     </section>
 
     <section class="results">
-      <h2>Results</h2>
+      <div class="results-header">
+        <h2>Recent Generations</h2>
+        <button id="refresh-recent" class="btn-small" type="button">Refresh</button>
+      </div>
+      <p class="results-hint">Shows the 10 most recent generated images. After your upload is accepted, you can close the browser and check back later.</p>
       <div id="results-grid" class="results-grid"></div>
     </section>
   </main>

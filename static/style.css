@@ -118,7 +118,56 @@ main {
   margin-bottom: 8px;
 }
 
-.preset-row select { flex: 1; padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; }
+.preset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.preset-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.preset-item input {
+  margin-top: 2px;
+}
+
+.preset-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.preset-item-text strong {
+  font-size: 0.875rem;
+}
+
+.preset-item-text span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.field-hint,
+.results-hint,
+.queue-status,
+.empty-state {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.queue-status {
+  min-height: 1.25rem;
+}
 
 textarea, input[type="number"] {
   width: 100%;
@@ -169,6 +218,18 @@ textarea, input[type="number"] {
 
 .results h2 { margin-bottom: 16px; font-size: 1.1rem; }
 
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.results-hint {
+  margin-bottom: 16px;
+}
+
 .results-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -187,6 +248,22 @@ textarea, input[type="number"] {
   width: 100%;
   display: block;
   cursor: pointer;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.result-card-body {
+  padding: 10px 10px 0;
+}
+
+.result-prompt {
+  font-size: 0.88rem;
+}
+
+.result-meta {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }
 
 .result-card .card-actions {

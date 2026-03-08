@@ -1,0 +1,68 @@
+[
+  {
+    "id": "f1835683-acaa-4ab7-a496-1c33fd6aadbd",
+    "job_id": "d0dce95a-3a4f-4b1c-b429-51a61e136a5d",
+    "filename": "IMG_4337_20260308_193809_0.png",
+    "url": "/generated/IMG_4337_20260308_193809_0.png",
+    "prompt": "\u5f71\u89c6\u7ea7\u771f\u5b9e\u8d28\u611f\uff0c\u6237\u5916\u81ea\u7136\u96ea\u5730\u573a\u666f\uff0c\u80cc\u666f\u67d4\u548c\u52a8\u6001\u865a\u5316\uff0c\u7ec6\u817b\u91d1\u8272\u53d1\u4e1d\u5149\uff0c\u5149\u5f71\u5c42\u6b21\u4e30\u5bcc\u901a\u900f\uff0c\u80cc\u666f\u9002\u5ea6\u538b\u6697\uff0c\u6697\u90e8\u8d28\u611f\u53e0\u52a0\uff0c\u4f4e\u9971\u548c\u9ad8\u7ea7\u8272\u8c03\uff0c\u753b\u9762\u5e72\u51c0\u5199\u5b9e\uff0c\u4e25\u683c\u9075\u5faa\u539f\u56fe\u900f\u89c6\u5173\u7cfb\u4e0e\u771f\u5b9e\u7269\u7406\u5149\u5f71\uff0c\u7279\u5199\u955c\u5934\uff0c\u5730\u9762\u6c34\u5e73\u7aef\u6b63\uff0c\u4e25\u683c\u4fdd\u7559\u4eba\u7269\u539f\u8868\u60c5\u3001\u539f\u59ff\u52bf\u3001\u539f\u6bd4\u4f8b\u4e0d\u53d8\uff0c\u7ec6\u8282\u7cbe\u81f4\uff0c\u8fb9\u7f18\u81ea\u7136\uff0c\u5408\u6210\u65e0\u75d5",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:36:37.116024+00:00",
+    "created_at": "2026-03-08T19:38:10.238403+00:00",
+    "source_filename": "IMG_4337.JPG"
+  },
+  {
+    "id": "50939c3c-b723-4233-ba09-b50b8e48ea16",
+    "job_id": "40e1cb6a-66fd-4a6b-85fa-95959b94ad7b",
+    "filename": "IMG_4337_20260308_193803_0.png",
+    "url": "/generated/IMG_4337_20260308_193803_0.png",
+    "prompt": "\u5f71\u89c6\u7ea7\u771f\u5b9e\u8d28\u611f\uff0c\u6237\u5916\u81ea\u7136\u96ea\u5730\u573a\u666f\uff0c\u80cc\u666f\u67d4\u548c\u52a8\u6001\u865a\u5316\uff0c\u7ec6\u817b\u91d1\u8272\u53d1\u4e1d\u5149\uff0c\u5149\u5f71\u5c42\u6b21\u4e30\u5bcc\u901a\u900f\uff0c\u80cc\u666f\u9002\u5ea6\u538b\u6697\uff0c\u6697\u90e8\u8d28\u611f\u53e0\u52a0\uff0c\u4f4e\u9971\u548c\u9ad8\u7ea7\u8272\u8c03\uff0c\u753b\u9762\u5e72\u51c0\u5199\u5b9e\uff0c\u4e25\u683c\u9075\u5faa\u539f\u56fe\u900f\u89c6\u5173\u7cfb\u4e0e\u771f\u5b9e\u7269\u7406\u5149\u5f71\uff0c\u7279\u5199\u955c\u5934\uff0c\u5730\u9762\u6c34\u5e73\u7aef\u6b63\uff0c\u4e25\u683c\u4fdd\u7559\u4eba\u7269\u539f\u8868\u60c5\u3001\u539f\u59ff\u52bf\u3001\u539f\u6bd4\u4f8b\u4e0d\u53d8\uff0c\u7ec6\u8282\u7cbe\u81f4\uff0c\u8fb9\u7f18\u81ea\u7136\uff0c\u5408\u6210\u65e0\u75d5",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:36:37.068551+00:00",
+    "created_at": "2026-03-08T19:38:04.190000+00:00",
+    "source_filename": "IMG_4337.JPG"
+  },
+  {
+    "id": "aa64cd8b-7be3-4ce1-9db0-8b62cc53d8e1",
+    "job_id": "a4e3fe0e-0bae-480c-af32-d0524b89a5b5",
+    "filename": "IMG_4337_20260308_193802_0.png",
+    "url": "/generated/IMG_4337_20260308_193802_0.png",
+    "prompt": "Create a Monochromatic Color Effect for background, while keeping the main subject in original color",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:36:37.150074+00:00",
+    "created_at": "2026-03-08T19:38:03.043402+00:00",
+    "source_filename": "IMG_4337.JPG"
+  },
+  {
+    "id": "8254cdcc-993d-4f43-a1b9-39d7afc77a11",
+    "job_id": "c5c5ba34-bc4a-4f14-ab30-2534731b4506",
+    "filename": "IMG_4440_20260308_192251_0.png",
+    "url": "/generated/IMG_4440_20260308_192251_0.png",
+    "prompt": "Transform this into a professional studio portrait with soft lighting",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:21:16.318013+00:00",
+    "created_at": "2026-03-08T19:22:50.446735+00:00",
+    "source_filename": "IMG_4440.JPG"
+  },
+  {
+    "id": "895d24b9-700b-4a92-91d7-34483f3d4d60",
+    "job_id": "adb8cb32-7158-48c1-8c90-e5d9da1844e8",
+    "filename": "IMG_4440_20260308_192245_0.png",
+    "url": "/generated/IMG_4440_20260308_192245_0.png",
+    "prompt": "Enhance this image to better lighting, remove shadows and brighten the subject",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:21:16.366128+00:00",
+    "created_at": "2026-03-08T19:22:46.146583+00:00",
+    "source_filename": "IMG_4440.JPG"
+  },
+  {
+    "id": "fd2a531c-08fe-4b95-b47b-837bd2e6853b",
+    "job_id": "d0dd72bc-d766-47a5-b34b-351271eda6d8",
+    "filename": "IMG_4330_20260308_191734_0.png",
+    "url": "/generated/IMG_4330_20260308_191734_0.png",
+    "prompt": "Clean up the background by adding a background blur while keeping the main subject sharp and clear",
+    "model": "gpt-image-1.5",
+    "submitted_at": "2026-03-08T19:16:15.999094+00:00",
+    "created_at": "2026-03-08T19:17:35.450025+00:00",
+    "source_filename": "IMG_4330.JPG"
+  }
+]
